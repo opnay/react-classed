@@ -1,21 +1,15 @@
 {
-  "name": "@opnay/test",
-  "version": "0.0.5",
+  "name": "@opnay/react-classed",
+  "version": "0.0.1",
   "description": "",
   "author": "OPNay",
   "license": "MIT",
-  "repository": "opnay/test",
+  "repository": "opnay/react-classed",
+  "files": ["dist"],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
   "scripts": {
     "test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
     "test:watch": "react-scripts-ts test --env=jsdom",
@@ -27,7 +21,6 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
   },
@@ -59,10 +52,6 @@
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-postcss": "^2.5.0",
     "rollup-plugin-typescript2": "^0.27.0",
-    "tslib": "^1.11.1",
     "typescript": "^3.8.3"
-  },
-  "files": [
-    "dist"
-  ]
+  }
 }

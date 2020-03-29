@@ -1,31 +1,38 @@
 # classed
 
-> 
-
-[![NPM](https://img.shields.io/npm/v/classed.svg)](https://www.npmjs.com/package/classed) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+>
 
 ## Install
 
 ```bash
-npm install --save classed
+npm install --save @opnay/react-classed
+npm install --registry https://npm.pkg.github.com/ --save @opnay/react-classed
+
+yarn add @opnay/react-classed
+yarn add --registry https://npm.pkg.github.com/ @opnay/react-classed
 ```
 
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import * as React from 'react';
 
-import MyComponent from 'classed'
+import { ClassedRef } from '@opnay/react-classed';
+
+// this select query as `span.accent`
+const Accent = ClassedRef('Accent', 'accent', 'span');
 
 class Example extends React.Component {
-  render () {
+  render() {
     return (
-      <MyComponent />
-    )
+      <p>
+        This is <Accent>accent</Accent>
+      </p>
+    );
   }
 }
 ```
 
 ## License
 
-MIT © [OPNay](https://github.com/OPNay)
+Apache License 2.0 © [OPNay](https://github.com/OPNay)

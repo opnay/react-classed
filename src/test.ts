@@ -1,7 +1,9 @@
-import ExampleComponent from './'
+import { ClassedRef } from './Classed';
+
+const Test = ClassedRef('Test', 'this-is-test', 'div');
 
 describe('ExampleComponent', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+    expect(Test).toBeTruthy();
+  });
+});
