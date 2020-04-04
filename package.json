@@ -1,13 +1,11 @@
 {
   "name": "@opnay/react-classed",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "author": "OPNay",
   "license": "MIT",
   "repository": "opnay/react-classed",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
