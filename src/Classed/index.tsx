@@ -1,6 +1,6 @@
 import React from 'react';
 import { ElementComponent, Elements, ForwardRefComponent, ClassName } from '../types';
-import useClassName from './useClassName';
+import useClassNames from '../utils/useClassNames';
 
 export interface IClassed {
   <P extends ClassName>(name: string, classed: string, component: React.ComponentType<P>): React.ComponentType<P>;
@@ -23,7 +23,7 @@ function ClassedFunc<P extends React.PropsWithChildren<ClassName>>(
 ): React.FunctionComponent<P> {
   function ClassedComponent(props: P) {
     const { className } = props;
-    const _className = useClassName(classed || name.toLowerCase(), className);
+    const _className = useClassNames(classed || name.toLowerCase(), className);
     return React.createElement(component, { ...props, className: _className });
   }
 
@@ -39,7 +39,7 @@ function ClassedRefFunc<K extends Elements, P extends React.PropsWithChildren<Re
 ) {
   function ClassedComponent(props: React.PropsWithoutRef<P>, ref: React.Ref<ElementComponent<K>>) {
     const { className } = props;
-    const _className = useClassName(classed || name.toLowerCase(), className);
+    const _className = useClassNames(classed || name.toLowerCase(), className);
     return React.createElement(component || name, { ...props, className: _className, ref });
   }
 
