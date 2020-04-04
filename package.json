@@ -5,7 +5,9 @@
   "author": "OPNay",
   "license": "MIT",
   "repository": "opnay/react-classed",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
