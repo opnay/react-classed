@@ -1,7 +1,7 @@
 function classNames(...names: any[]): string {
   const ret = [];
 
-  for (const name in names) {
+  for (const name of names) {
     const t = typeof name;
 
     switch (t) {
