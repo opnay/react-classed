@@ -7,7 +7,7 @@ export type ElementComponent<H extends Elements> = React.ReactHTML[H] extends Re
 // ReturnType<React.forwardRef>
 export type ForwardRefComponent<
   T extends Elements,
-  P extends React.PropsWithChildren<ClassName> = React.PropsWithChildren<ClassName>
+  P extends React.PropsWithChildren<ClassName> = React.ComponentProps<T>
 > = React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<ElementComponent<T>>>;
 
 // Class Props
